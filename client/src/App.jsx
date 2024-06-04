@@ -5,7 +5,7 @@ import styles from './index.module.css'
 import sqlLogo from './assets/sql-logo.png'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [queryDescription, setQueryDescription] = useState("")
 
   return (
     <main className={styles.main}>
@@ -17,6 +17,7 @@ function App() {
         type="text"
         name="query-description"
         placeholder="Describe your query"
+        onChange={(e) => setQueryDescription(e.target.value)}
         />
         <input type="submit" value="Generate query"/>
       </form>
